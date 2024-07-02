@@ -1,6 +1,6 @@
 cask "buttercup" do
-  version "2.26.4"
-  sha256 "2c265eca067d306ba1a8e22d936745cd48e4d46bd759189b9dee0e6d602a9fb7"
+  version "2.27.0"
+  sha256 "ee56e253edcdb5b70a006c9b57ac38903e0fbf84409f07ba2a95c57add3fbe83"
 
   url "https://github.com/buttercup/buttercup-desktop/releases/download/v#{version}/Buttercup-mac-x64-#{version}.dmg",
       verified: "github.com/buttercup/buttercup-desktop/"
@@ -26,4 +26,8 @@ cask "buttercup" do
     "~/Library/Preferences/pw.buttercup.desktop.plist",
     "~/Library/Saved Application State/pw.buttercup.desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

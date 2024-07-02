@@ -1,6 +1,6 @@
 cask "wave" do
-  version "0.7.1"
-  sha256 "3be4759292d636e9e472f7f23dca5a401e4241a4c146a918323b50908c6d0e07"
+  version "0.7.6"
+  sha256 "6fbe5e42752d790efaefe72b55efa059f05fecfaeb123a0d1554f1f2cfe34d73"
 
   url "https://dl.waveterm.dev/releases/Wave-darwin-universal-#{version}.dmg"
   name "Wave Terminal"

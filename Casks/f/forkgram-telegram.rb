@@ -1,9 +1,9 @@
 cask "forkgram-telegram" do
   arch arm: "arm64", intel: "x86"
 
-  version "4.15.6"
-  sha256 arm:   "626a7e457ce6ce83fbc37831a828c9861a2f406495ee62f4af45691dd399363a",
-         intel: "fe0b49744c54a36f5afcd3f3ffd0fcbaa57957dc8ab3581b372a0dac20db5202"
+  version "5.2.1"
+  sha256 arm:   "f47e689d60a419e69fc43d82c24ee9fb0b1e3ec7b0f0671b1800ceb19c935d81",
+         intel: "8dcb5cb6f8ee842c7d202115c27f4c7e091eefddf1aaa33d133edef531b7e981"
 
   url "https://github.com/Forkgram/tdesktop/releases/download/v#{version}/Forkgram.macOS.no.auto-update_#{arch}.zip"
   name "Forkgram"

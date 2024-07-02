@@ -1,6 +1,6 @@
 cask "whisky" do
-  version "2.2.3"
-  sha256 "edb23639eff3ef992d74690be5f22b1e812c4bafef0fac7b1ad99a077e1ba954"
+  version "2.3.2"
+  sha256 "75136176947df9701c6387fdc3420f29ec0414e845304e2582b17f62dfeb805f"
 
   url "https://github.com/IsaacMarovitz/Whisky/releases/download/v#{version}/Whisky.zip",
       verified: "github.com/IsaacMarovitz/Whisky/"
@@ -21,8 +21,10 @@ cask "whisky" do
   binary "#{appdir}/Whisky.app/Contents/Resources/WhiskyCmd", target: "whisky"
 
   zap trash: [
+    "~/Library/Application Scripts/com.isaacmarovitz.Whisky.WhiskyThumbnail",
     "~/Library/Application Support/com.isaacmarovitz.Whisky",
     "~/Library/Containers/com.isaacmarovitz.Whisky",
+    "~/Library/Containers/com.isaacmarovitz.Whisky.WhiskyThumbnail",
     "~/Library/HTTPStorages/com.isaacmarovitz.Whisky",
     "~/Library/Logs/com.isaacmarovitz.Whisky",
     "~/Library/Preferences/com.isaacmarovitz.Whisky.plist",

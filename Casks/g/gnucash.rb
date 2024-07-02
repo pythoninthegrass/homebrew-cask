@@ -1,6 +1,6 @@
 cask "gnucash" do
-  version "5.5-1"
-  sha256 "a27ab3dd3ada69456cb8033473f7bab5ae5874a4880416672d9b4fd2e1c26408"
+  version "5.7-1"
+  sha256 "1f55eb6eadd1ff18c41947601d57d43e280732dff577621e0441b47d9d688b0a"
 
   url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-Intel-#{version}.dmg",
       verified: "github.com/Gnucash/gnucash/"
@@ -28,4 +28,8 @@ cask "gnucash" do
     "~/Library/Preferences/org.gnucash.Gnucash.plist",
     "~/Library/Saved Application State/org.gnucash.Gnucash.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

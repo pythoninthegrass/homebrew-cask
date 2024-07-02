@@ -1,15 +1,13 @@
 cask "macupdater" do
   on_monterey :or_older do
-    version "2.3.12"
-    sha256 "8518ec1d49fbeae5441bf3921c0f2eb6b78e6e86466d330325db7c00ed1bcc3c"
-
-    depends_on macos: ">= :mojave"
+    version "2.3.15"
+    sha256 "9d6775c99b2a76d3f3be0e3d23c27305666341be16d38a0661c8d9cfa50e5256"
   end
   on_ventura :or_newer do
-    version "3.2.6"
-    sha256 "6dbd6f5bda8a0eb56b0b47a3037233fa9fc2197cb0dfbacd62c886171b1c0cea"
+    version "3.3.1"
+    sha256 "3052da96d7f09416dfebac43f5579c5fdb8789df2e35c85f0870c12634c83d8c"
 
-    depends_on macos: ">= :ventura"
+    binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_install"
   end
 
   url "https://www.corecode.io/downloads/macupdater_#{version}.dmg"
@@ -23,6 +21,7 @@ cask "macupdater" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "MacUpdater.app"
   binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_client"
@@ -32,8 +31,7 @@ cask "macupdater" do
 
   zap trash: [
     "~/Library/Application Scripts/com.corecode.MacUpdaterLaunchHelper",
-    "~/Library/Application Support/MacUpdater",
-    "~/Library/Application Support/MacUpdaterInstallHelper",
+    "~/Library/Application Support/MacUpdater*",
     "~/Library/Caches/com.corecode.MacUpdater",
     "~/Library/Containers/com.corecode.MacUpdaterLaunchHelper",
     "~/Library/Cookies/com.corecode.MacUpdater.binarycookies",
